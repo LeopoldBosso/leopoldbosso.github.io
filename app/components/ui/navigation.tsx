@@ -7,26 +7,26 @@ interface BannerAndNavigationProps {
   bannerImage: string;
   titlePage: string;
   linkPage: string;
-  isScrolled:boolean;
+  isScrolled: boolean;
 }
 
-const BannerAndNavigation: React.FC<BannerAndNavigationProps> = ({ bannerTitle, bannerImage, titlePage, linkPage,isScrolled }) => {
+const BannerAndNavigation: React.FC<BannerAndNavigationProps> = ({ bannerTitle, bannerImage, titlePage, linkPage, isScrolled }) => {
   return (
     <div className="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl z-50">
       {/* Bannière animée */}
       <motion.section
-        animate={{ height: isScrolled  ? "6rem" : "16rem" }}
+        animate={{ height: isScrolled ? "6rem" : "16rem" }}
         transition={{ duration: 0.4, ease: "easeInOut" }}
-        className="relative w-full rounded-2xl overflow-hidden shadow-lg bg-black"
+        className="relative w-full rounded-2xl overflow-hidden shadow-lg bg-white"
       >
         {/* Image de fond */}
-        <img
+        {/* <img
           src={bannerImage}
           alt="Bannière"
           className="absolute inset-0 w-full h-full object-cover z-0"
-        />
+        /> */}
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black/40 z-10" />
+        {/* <div className="absolute inset-0 bg-black/40 z-10" /> */}
         {/* Texte */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
@@ -34,7 +34,7 @@ const BannerAndNavigation: React.FC<BannerAndNavigationProps> = ({ bannerTitle, 
           transition={{ duration: 0.5 }}
           className="absolute inset-0 flex items-center justify-center z-20"
         >
-          <h1 className="text-white text-2xl md:text-3xl font-bold text-center drop-shadow">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">
             {bannerTitle}
           </h1>
         </motion.div>

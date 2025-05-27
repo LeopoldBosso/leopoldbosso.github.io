@@ -1,6 +1,4 @@
 import { motion } from "framer-motion";
-import { School, GraduationCap, File, BookOpen, Home } from "lucide-react";
-import { Link } from "react-router";
 import { useEffect, useState } from "react";
 import BannerAndNavigation from "~/components/ui/navigation";
 
@@ -30,8 +28,8 @@ const experiences = [
         responsabilities: ["Développement logiciel", "Rapports, Maintenance", "Support client"],
     },    
     {
-        name: "Père au foyer puis retour aux études - Tahiti - Polynésie française",
-        role: "Père au foyer et étudiant",
+        name: "Retour aux études - Tahiti - Polynésie française",
+        role: "Étudiant",
         date: "2012 – 2018",
         image: "https://cdn.tahitiheritage.pf/wp-content/uploads/2015/01/embleme-polynesie-franc%CC%A7aise-1.jpg",
         description: null,
@@ -49,7 +47,7 @@ const experiences = [
         name: "McDonald's – Vitrolles, France",
         role: "Manager de restaurant",
         date: "2008 – 2008",
-        image: "/mcdonald.jpg",
+        image: "/mcdonald.png",
         description: "Responsable de la gestion d'un restaurant, respect des processus et reglementation alimentaire, accompagnement des équipes.",
         responsabilities: ["Gestion des stock", "Commande produit et inventaire", "Gestion RH : suivi, repartition", "Service à la clientèle"],
     },
