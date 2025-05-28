@@ -30,8 +30,12 @@ export default function CVLeopoldBossoStyled() {
             <h1 className="text-4xl font-extrabold text-blue-900">Léopold Bosso</h1>
             <div className="mt-4 flex flex-wrap justify-center gap-4 text-sm text-blue-700">
               <span className="flex items-center gap-2"><Phone size={16} /> (581) 669-1018</span>
+              <a  href="mailto:leopold.bosso@outlook.com">
               <span className="flex items-center gap-2"><Mail size={16} /> leopold.bosso@outlook.com</span>
+              </a>
+              <a  href="https://linkedin.com/in/lbosso">
               <span className="flex items-center gap-2"><Linkedin size={16} /> linkedin.com/in/lbosso</span>
+              </a>
               <span className="flex items-center gap-2"><MapPin size={16} /> Lévis, QC</span>
             </div>
           </div>
