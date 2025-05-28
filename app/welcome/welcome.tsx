@@ -71,17 +71,12 @@ export function Welcome() {
             className="p-6 rounded-2xl shadow-md bg-white border"
           >
             <h3 className="text-xl font-medium mb-2 flex items-center gap-2">
-              <Folder className="w-5 h-5" /> Portfolio personnel
+              <Folder className="w-5 h-5" /> Portfolio Suite Aurora
             </h3>
             <p className="text-sm text-slate-600 mb-3">
-              Un site pour présenter mes projets, compétences et mon parcours.
+              Cette page vous présentera le projet Aurora et mes implications.
             </p>
-            <a
-              href="#"
-              className="text-sm text-blue-600 hover:underline"
-            >
-              Voir le projet
-            </a>
+            <Link to="/folio" className="text-sm text-blue-600 hover:underline">Voir les projets</Link>
           </motion.div>
 
           <motion.div
@@ -91,17 +86,12 @@ export function Welcome() {
             className="p-6 rounded-2xl shadow-md bg-white border"
           >
             <h3 className="text-xl font-medium mb-2 flex items-center gap-2">
-              <Folder className="w-5 h-5" /> Application de tâches
+              <Folder className="w-5 h-5" /> Portfolio Suite SFM
             </h3>
-            <p className="text-sm text-slate-600 mb-3">
-              Une app de gestion de tâches collaborative avec authentification et interface moderne.
+             <p className="text-sm text-slate-600 mb-3">
+              Cette page vous présentera le projet SFM et mes implications.
             </p>
-            <a
-              href="#"
-              className="text-sm text-blue-600 hover:underline"
-            >
-              Voir le projet
-            </a>
+            <Link to="/folio/suite-sfm" className="text-sm text-blue-600 hover:underline">Voir les projets</Link>
           </motion.div>
         </div>
       </section>

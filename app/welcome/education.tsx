@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { School, GraduationCap, HomeIcon, File, Briefcase, Home } from "lucide-react";
+import { School, GraduationCap, HomeIcon, File, Briefcase, Book } from "lucide-react";
 import { useEffect, useState } from "react";
 import BannerAndNavigation from "~/components/ui/navigation";
 
@@ -46,9 +46,11 @@ export default function Education() {
         <div className="max-w-4xl mx-auto p-6">
             <BannerAndNavigation
                 bannerTitle="Mes études et certificats"
-                bannerImage="/diplome.jpg"
-                titlePage="Experiences professionnelles"
-                linkPage="/workexperience"
+                linkPages={[
+                    { icon: Briefcase , link: "workexperience",titlePage: "Mes experiences professionnelles" },
+                    { icon: Book , link: "folio", titlePage: "Mes projets" },                    
+                    { icon: File , link: "cvlbgraph",titlePage: "Mon CV" },
+                ]}
                 isScrolled={isScrolled}
             />
 

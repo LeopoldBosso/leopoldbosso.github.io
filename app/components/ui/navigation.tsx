@@ -1,44 +1,51 @@
 import { Link } from "react-router-dom";
 import { Home, Briefcase, File } from "lucide-react";
 import { motion } from "framer-motion";
+import * as Icons from "lucide-react";
+
+interface LinkPage {
+  icon: React.ComponentType<{ className?: string }>;
+  link: string;
+  titlePage: string;
+}
 
 interface BannerAndNavigationProps {
-  bannerTitle: string;
-  bannerImage: string;
-  titlePage: string;
-  linkPage: string;
+  bannerTitle?: string;
+  linkPages: LinkPage[];
   isScrolled: boolean;
 }
 
-const BannerAndNavigation: React.FC<BannerAndNavigationProps> = ({ bannerTitle, bannerImage, titlePage, linkPage, isScrolled }) => {
+
+type IconType = React.ComponentType<{ className?: string }>;
+
+const Icon = ({ icon: Icon }: { icon: IconType }) => {
+  return <Icon className="w-5 h-5" />;
+};
+
+
+const BannerAndNavigation: React.FC<BannerAndNavigationProps> = ({ bannerTitle, linkPages, isScrolled }) => {
   return (
-    <div className="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl z-50">
+    <div className="print:hidden fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl z-50">
       {/* Bannière animée */}
-      <motion.section
-        animate={{ height: isScrolled ? "6rem" : "16rem" }}
-        transition={{ duration: 0.4, ease: "easeInOut" }}
-        className="relative w-full rounded-2xl overflow-hidden shadow-lg bg-white"
-      >
-        {/* Image de fond */}
-        {/* <img
-          src={bannerImage}
-          alt="Bannière"
-          className="absolute inset-0 w-full h-full object-cover z-0"
-        /> */}
-        {/* Overlay */}
-        {/* <div className="absolute inset-0 bg-black/40 z-10" /> */}
-        {/* Texte */}
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="absolute inset-0 flex items-center justify-center z-20"
+      {bannerTitle && (
+        <motion.section
+          animate={{ height: isScrolled ? "6rem" : "16rem" }}
+          transition={{ duration: 0.4, ease: "easeInOut" }}
+          className="relative w-full rounded-2xl overflow-hidden shadow-lg bg-white"
         >
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            {bannerTitle}
-          </h1>
-        </motion.div>
-      </motion.section>
+          {/* Texte */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="absolute inset-0 flex items-center justify-center z-20"
+          >
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+              {bannerTitle}
+            </h1>
+          </motion.div>
+        </motion.section>
+      )}
 
       {/* Navigation */}
       <motion.nav
@@ -52,14 +59,12 @@ const BannerAndNavigation: React.FC<BannerAndNavigationProps> = ({ bannerTitle, 
             <Home className="w-5 h-5" />
             Accueil
           </Link>
-          <Link to={linkPage} className="flex items-center gap-2 text-gray-800 hover:text-blue-600">
-            <Briefcase className="w-5 h-5" />
-            {titlePage}
-          </Link>
-          <Link to="/cvlbgraph" className="flex items-center gap-2 text-gray-800 hover:text-blue-600">
-            <File className="w-5 h-5" />
-            Mon CV
-          </Link>
+          {linkPages.map((page) => (
+            <Link to={`/${page.link}`} className="flex items-center gap-2 text-gray-800 hover:text-blue-600">
+              <Icon icon={page.icon} />
+              {page.titlePage}
+            </Link>
+          ))}
         </div>
       </motion.nav>
     </div>

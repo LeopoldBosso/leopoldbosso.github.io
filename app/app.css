@@ -132,3 +132,27 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+@media print {
+  .no-print{
+    display: contents;
+  }
+  .print-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    page-break-before: auto;
+    padding-top: 24px; /* Espace en haut si saut de page */
+    margin-bottom: 24px;
+  }
+
+  /* Empêche les enfants (cartes, etc.) d’être coupés aussi */
+  .print-section > * {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    padding-top: 24px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}

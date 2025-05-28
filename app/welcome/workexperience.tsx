@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import BannerAndNavigation from "~/components/ui/navigation";
+import { Book,School, File } from "lucide-react";
 
 const experiences = [
     {
@@ -26,7 +27,7 @@ const experiences = [
         image: "https://apnglobal.ca/wp-content/uploads/APN-logo-bolder.svg",
         description: "Responsable de la gestion des systèmes d'information, amélioration des processus internes, accompagnement des équipes.",
         responsabilities: ["Développement logiciel", "Rapports, Maintenance", "Support client"],
-    },    
+    },
     {
         name: "Retour aux études - Tahiti - Polynésie française",
         role: "Étudiant",
@@ -41,7 +42,7 @@ const experiences = [
         date: "2008 – 2012",
         image: "https://norauto-guyane.fr//wp-content/uploads/2018/04/logo_norauto.png",
         description: "Mécanicien automobile, installateur électrique et audio, entretien des 2 roues.",
-        responsabilities: ["Entretien mécanique courant", "Remplacement de vitre","audio, alarme et système électrique complexe", "maintenance complète et carrosserie des 2 roues", "Support client"],
+        responsabilities: ["Entretien mécanique courant", "Remplacement de vitre", "audio, alarme et système électrique complexe", "maintenance complète et carrosserie des 2 roues", "Support client"],
     },
     {
         name: "McDonald's – Vitrolles, France",
@@ -85,13 +86,16 @@ export default function Workexperience() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+
     return (
         <div className="max-w-4xl mx-auto p-6">
             <BannerAndNavigation
                 bannerTitle="Mes experiences professionnelles"
-                bannerImage="/experience.jpg"
-                titlePage="Études et certificats"
-                linkPage="/education"
+                linkPages={[
+                    { icon: School , link: "education", titlePage: "Études et certificats" },
+                    { icon: Book , link: "folio",titlePage: "Mes projets" },
+                    { icon: File , link: "cvlbgraph",titlePage: "Mon CV" },
+                ]}
                 isScrolled={isScrolled}
             />
 
