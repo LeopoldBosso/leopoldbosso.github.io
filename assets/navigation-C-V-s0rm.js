@@ -1,0 +1,11 @@
+import{c as n}from"./createLucideIcon-Dl25H-K7.js";import{o as e,s as i}from"./chunk-D4RADZKF-Dgj59hC6.js";import{m as s}from"./proxy-ChVzyMnM.js";/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const l=[["path",{d:"M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8",key:"5wwlr5"}],["path",{d:"M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z",key:"1d0kgt"}]],r=n("house",l);/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const d=[["path",{d:"M14 22v-4a2 2 0 1 0-4 0v4",key:"hhkicm"}],["path",{d:"m18 10 3.447 1.724a1 1 0 0 1 .553.894V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-7.382a1 1 0 0 1 .553-.894L6 10",key:"1xqip1"}],["path",{d:"M18 5v17",key:"1sw6gf"}],["path",{d:"m4 6 7.106-3.553a2 2 0 0 1 1.788 0L20 6",key:"9d2mlk"}],["path",{d:"M6 5v17",key:"1xfsm0"}],["circle",{cx:"12",cy:"9",r:"2",key:"1092wv"}]],p=n("school",d),x=({icon:a})=>e.jsx(a,{className:"w-5 h-5"}),u=({bannerTitle:a,linkPages:o,isScrolled:c})=>e.jsxs("div",{className:"print:hidden fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl z-50",children:[a&&e.jsx(s.section,{animate:{height:c?"6rem":"16rem"},transition:{duration:.4,ease:"easeInOut"},className:"relative w-full rounded-2xl overflow-hidden shadow-lg bg-white",children:e.jsx(s.div,{initial:{opacity:0,y:10},animate:{opacity:1,y:0},transition:{duration:.5},className:"absolute inset-0 flex items-center justify-center z-20",children:e.jsx("h1",{className:"text-4xl md:text-5xl font-bold mb-4",children:a})})}),e.jsx(s.nav,{className:"mt-2 bg-gray-100 shadow-xl shadow-gray-500/30 px-6 py-3 rounded-xl flex justify-center items-center",initial:{y:-30,opacity:0},animate:{y:0,opacity:1},transition:{duration:.1},children:e.jsxs("div",{className:"flex space-x-6",children:[e.jsxs(i,{to:"/",className:"flex items-center gap-2 text-gray-800 hover:text-blue-600",children:[e.jsx(r,{className:"w-5 h-5"}),"Accueil"]}),o.map(t=>e.jsxs(i,{to:`/${t.link}`,className:"flex items-center gap-2 text-gray-800 hover:text-blue-600",children:[e.jsx(x,{icon:t.icon}),t.titlePage]}))]})})]});export{u as B,p as S};

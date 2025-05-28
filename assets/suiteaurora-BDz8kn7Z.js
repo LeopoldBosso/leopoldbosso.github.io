@@ -1,0 +1,1 @@
+import{w as t}from"./with-props-Cr-61YSs.js";import{o as r}from"./chunk-D4RADZKF-Dgj59hC6.js";import{s as o}from"./suiteaurora-VkJ6w3H-.js";import"./proxy-ChVzyMnM.js";function s({}){return[{title:"suiteaurora"},{name:"Projet Suite Aurora",content:"En html!"}]}const m=t(function(){return r.jsx(o,{})});export{m as default,s as meta};
