@@ -1,4 +1,4 @@
-import{w as i}from"./with-props-Cr-61YSs.js";import{o as e}from"./chunk-D4RADZKF-Dgj59hC6.js";import{m as n}from"./proxy-ChVzyMnM.js";const t={title:"Logiciel GIDOC",period:"2020 - Aujourd’hui",description:`Outil permettant de générer une grande quantité de documents, 
+import{w as i}from"./with-props-B6V7a6HP.js";import{o as e}from"./chunk-D4RADZKF-R3cz4WnU.js";import{m as n}from"./proxy-D7FU_v-2.js";const t={title:"Logiciel GIDOC",period:"2020 - Aujourd’hui",description:`Outil permettant de générer une grande quantité de documents, 
                           comme les comptes de taxes des municipalités. Son noyau est conçu pour être compatible avec 
                           tous les logiciels PG Solutions, notamment Aurora, où il génère des documents essentiels 
                           comme les talons de paie et les relevés fiscaux.Outil permettant de générer une grande quantité de documents, 
