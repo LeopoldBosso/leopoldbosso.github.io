@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { School, Book, File, Briefcase, Home, ChevronDown } from "lucide-react";
 
@@ -19,24 +19,24 @@ const linkedPages = [
   { icon: File, link: "cvlbgraph", titlePage: "CV" },
 ];
 
-type IconType = React.ComponentType<{ className?: string }>;
-
-const Icon = ({ icon: Icon }: { icon: IconType }) => {
-  return <Icon className="w-5 h-5" />;
-};
-
 const BannerAndNavigation: React.FC = () => {
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const location = useLocation();
+  const activeItemRef = useRef<HTMLDivElement | null>(null);
   let timeoutId: ReturnType<typeof setTimeout>;
+
+  // 🔹 Recentre l'élément actif en mobile
+  useEffect(() => {
+    if (activeItemRef.current) {
+      activeItemRef.current.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" });
+    }
+  }, [location.pathname]);
 
   return (
     <div className="print:hidden fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl z-50">
       <nav className="mt-2 bg-gray-100 shadow-xl shadow-gray-500/30 px-6 py-3 rounded-xl flex justify-center items-center">
         <div className="relative w-full">
-          {/* Wrapper pour scroll horizontal uniquement sur mobile */}
           <div className="md:overflow-visible overflow-x-auto scrollbar-hide">
-            {/* Flex pour les éléments de navigation */}
             <div className="flex space-x-6 whitespace-nowrap px-2 md:justify-center min-w-max">
               {linkedPages.map((page) => {
                 const isOpen = hoveredItem === page.titlePage;
@@ -47,6 +47,7 @@ const BannerAndNavigation: React.FC = () => {
                   <div
                     key={page.titlePage}
                     className="relative"
+                    ref={isActive ? activeItemRef : null} // Recentre l'élément actif sur mobile
                     onMouseEnter={() => { clearTimeout(timeoutId); hasSub && setHoveredItem(page.titlePage) }}
                     onMouseLeave={(e) => {
                       timeoutId = setTimeout(() => {
@@ -59,19 +60,14 @@ const BannerAndNavigation: React.FC = () => {
                   >
                     <Link
                       to={`/${page.link}`}
-                      className={`flex items-center gap-2 px-4 py-2 rounded 
+                      className={`flex items-center gap-2 px-4 py-2 rounded  
                         ${isActive ? "text-blue-600 font-bold" : "text-gray-800 hover:text-blue-600"}`}
                     >
-                      <Icon icon={page.icon} />
+                      {page.icon && <page.icon className="w-5 h-5" />}
                       {page.titlePage}
-
-                      {/* Chevron uniquement pour les pages avec sous-menu, visible uniquement en desktop */}
-                      {hasSub && (
-                        <ChevronDown className="hidden md:inline w-3 h-3 text-gray-400 ml-0.5" />
-                      )}
+                      {hasSub && <ChevronDown className="hidden md:inline w-3 h-3 text-gray-400 ml-0.5" />}
                     </Link>
 
-                    {/* Sous-menu visible uniquement sur desktop */}
                     {hasSub && isOpen && (
                       <div className="hidden md:block absolute left-0 top-full mt-1 w-36 bg-gray-100 border border-gray-300 shadow-lg rounded-lg z-10">
                         {page.subPages.map((sub) => (
