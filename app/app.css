@@ -156,3 +156,25 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+/* styles.css */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.submenu {
+  opacity: 0;
+  transform: translateY(-5px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.submenu.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+

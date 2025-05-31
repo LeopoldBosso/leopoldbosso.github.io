@@ -1,4 +1,4 @@
-import  Suiteaurora  from "../../welcome/project/suiteaurora";
+import { Navigate } from "react-router";
 import type { Route } from "../project/+types/suiteaurora";
 
 
@@ -11,5 +11,5 @@ export function meta({}: Route.MetaArgs) {
 
 
 export default function suiteaurora() {
-  return <Suiteaurora />;
+  return <Navigate to="/folio/suiteaurora" replace />;
 }

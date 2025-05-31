@@ -2,10 +2,12 @@ import { Link } from "react-router";
 import { Button } from "app/components/ui/button";
 import { Folder, Mail, File  } from "lucide-react";
 import { motion } from "framer-motion";
+import BannerAndNavigation from "~/components/ui/navigation";
 
 export function Welcome() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-white to-slate-100 flex flex-col justify-center items-center p-8">
+    <main className="min-h-screen bg-gradient-to-br from-white to-slate-100 flex flex-col justify-center items-center p-8 pt-[9rem]">
+      <BannerAndNavigation />
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}

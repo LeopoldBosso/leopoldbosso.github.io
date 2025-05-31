@@ -1,57 +1,73 @@
-import { motion } from "framer-motion";
-import { School, GraduationCap, HomeIcon, File, Briefcase, Home } from "lucide-react";
+import { useLocation, useNavigate } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import BannerAndNavigation from "~/components/ui/navigation";
 import { Outlet } from "react-router";
-import { Link } from "react-router-dom";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const experiences = ["Suite Aurora", "Logiciel GIDOC", "Suite SFM", "META 4.0", "Anciens postes"];
-
-function normalizeId(title: string) {
-    return title.toLowerCase().replace(/[^\w\s-]/g, "").replace(/\s+/g, "-");
-}
+const projectRoutes = [
+    { path: "suiteaurora", label: "Suite Aurora" },
+    { path: "gidoc", label: "Gidoc" },
+    { path: "sfm", label: "SFM" },
+];
 
 export default function Folio() {
-    const [isScrolled, setIsScrolled] = useState(false);
+    const location = useLocation();
+    const navigate = useNavigate();
+    const currentPath = location.pathname.split("/").pop();
+    const currentIndex = projectRoutes.findIndex((p) => p.path === currentPath);
+
+    const [prevPath, setPrevPath] = useState(location.pathname);
+    const [direction, setDirection] = useState(0); // -1: gauche, +1: droite
 
     useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolled(window.scrollY > 50);
-        };
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+        const prevIndex = projectRoutes.findIndex((p) => p.path === prevPath.split("/").pop());
+        const nextIndex = currentIndex;
+        setDirection(nextIndex > prevIndex ? 1 : -1);
+        setPrevPath(location.pathname);
+    }, [location.pathname]);
+
+    const goTo = (targetIndex: number) => {
+        const nextPath = projectRoutes[targetIndex].path;
+        navigate(`/folio/${nextPath}`);
+    };
+
+    const goPrev = () => goTo((currentIndex - 1 + projectRoutes.length) % projectRoutes.length);
+    const goNext = () => goTo((currentIndex + 1) % projectRoutes.length);
 
     return (
         <div className="flex">
-            <aside className="fixed top-[22rem] left-0 w-50 h-auto bg-gray-100 shadow-xl shadow-gray-500/30 px-6 py-3 rounded-xl z-40 print:hidden hidden md:block">
-                <nav className="space-y-2">
-                    {experiences.map((exp) => (
-                        <Link
-                            key={exp}
-                            to={normalizeId(exp)}
-                            className="block w-full text-left text-sm text-gray-800 hover:text-blue-600"
-                        >
-                            {exp}
-                        </Link>
-                    ))}
-                </nav>
-            </aside>
-            <div className="max-w-4xl mx-auto p-6">
-                <BannerAndNavigation
-                    bannerTitle="Mes projets"
-                    linkPages={[
-                        { icon: School, link: "education", titlePage: "Mes études et certificats" },
-                        { icon: Briefcase, link: "workexperience", titlePage: "Mes expériences professionnelles" },
-                        { icon: File, link: "cvlbgraph", titlePage: "Mon CV" }
-                    ]}
-                    isScrolled={isScrolled}
-                />
+            <div className="max-w-4xl mx-auto p-6 pt-[9rem] w-full">
+                <BannerAndNavigation />
 
-                <div className="pt-[22rem]">
-                    <div className="space-y-6 max-w-4xl mx-auto">
-                        <Outlet /> {/* Ici on injecte la page correspondant à la route */}
+                {/* Flèches en mobile */}
+                {currentIndex !== -1 && (
+                    <div className="md:hidden flex justify-between items-center mb-6 px-4">
+                        <button
+                            onClick={goPrev}
+                            aria-label="Projet précédent"
+                            className="p-3 bg-white rounded-full shadow-md text-gray-600 hover:text-blue-600 hover:shadow-lg transition duration-300 ease-in-out"
+                        >
+                            <ChevronLeft size={24} />
+                        </button>
+
+                        <span className="font-semibold text-gray-900 text-lg tracking-wide">
+                            {projectRoutes[currentIndex].label}
+                        </span>
+
+                        <button
+                            onClick={goNext}
+                            aria-label="Projet suivant"
+                            className="p-3 bg-white rounded-full shadow-md text-gray-600 hover:text-blue-600 hover:shadow-lg transition duration-300 ease-in-out"
+                        >
+                            <ChevronRight size={24} />
+                        </button>
                     </div>
+                )}
+
+                {/* Animation entre projets */}
+                <div className="space-y-6 max-w-4xl mx-auto relative">
+                    <Outlet />
                 </div>
             </div>
         </div>
