@@ -28,6 +28,7 @@ const Icon = ({ icon: Icon }: { icon: IconType }) => {
 const BannerAndNavigation: React.FC = () => {
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const location = useLocation();
+  let timeoutId: ReturnType<typeof setTimeout>;
 
   return (
     <div className="print:hidden fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl z-50">
@@ -36,7 +37,7 @@ const BannerAndNavigation: React.FC = () => {
           {/* Wrapper pour scroll horizontal uniquement sur mobile */}
           <div className="md:overflow-visible overflow-x-auto scrollbar-hide">
             {/* Flex pour les éléments de navigation */}
-            <div className="flex space-x-6 whitespace-nowrap px-2 w-full justify-center">
+            <div className="flex space-x-6 whitespace-nowrap px-2 md:justify-center min-w-max">
               {linkedPages.map((page) => {
                 const isOpen = hoveredItem === page.titlePage;
                 const hasSub = !!page.subPages;
@@ -46,8 +47,11 @@ const BannerAndNavigation: React.FC = () => {
                   <div
                     key={page.titlePage}
                     className="relative"
-                    onMouseEnter={() => hasSub && setHoveredItem(page.titlePage)}
+                    onMouseEnter={() => { clearTimeout(timeoutId); hasSub && setHoveredItem(page.titlePage) }}
                     onMouseLeave={(e) => {
+                      timeoutId = setTimeout(() => {
+                        setHoveredItem(null);
+                      }, 150);
                       if (!(e.relatedTarget as Node)?.contains(e.currentTarget)) {
                         setHoveredItem(null);
                       }
@@ -63,7 +67,7 @@ const BannerAndNavigation: React.FC = () => {
 
                       {/* Chevron uniquement pour les pages avec sous-menu, visible uniquement en desktop */}
                       {hasSub && (
-                         <ChevronDown className="hidden md:inline w-3 h-3 text-gray-400 ml-0.5" />
+                        <ChevronDown className="hidden md:inline w-3 h-3 text-gray-400 ml-0.5" />
                       )}
                     </Link>
 

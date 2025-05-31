@@ -1,8 +1,6 @@
 import { Card, CardContent } from "app/components/ui/card";
 import { Badge } from "app/components/ui/badge";
 import { Mail, Phone, MapPin, Linkedin, HomeIcon, Briefcase, School, Book } from "lucide-react";
-import { Button } from "~/components/ui/button";
-import { Link } from "react-router";
 import { motion } from "framer-motion";
 import BannerAndNavigation from "~/components/ui/navigation";
 
