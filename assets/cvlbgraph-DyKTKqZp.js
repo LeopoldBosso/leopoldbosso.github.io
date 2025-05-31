@@ -1,4 +1,4 @@
-import{w as d}from"./with-props-B6V7a6HP.js";import{o as e}from"./chunk-D4RADZKF-R3cz4WnU.js";import{c as n,S as x,a as m,M as p}from"./mail-CYhIEEEc.js";import{c as l,B as h}from"./navigation-CAqkqs7l.js";import{m as u}from"./proxy-D7FU_v-2.js";/**
+import{w as d}from"./with-props-B6V7a6HP.js";import{o as e}from"./chunk-D4RADZKF-R3cz4WnU.js";import{c as n,S as x,a as m,M as p}from"./mail-B1s5t53k.js";import{c as l,B as h}from"./navigation-DRyGQVQL.js";import{m as u}from"./proxy-D7FU_v-2.js";/**
  * @license lucide-react v0.511.0 - ISC
  *
  * This source code is licensed under the ISC license.
