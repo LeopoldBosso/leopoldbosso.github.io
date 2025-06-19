@@ -1,4 +1,4 @@
-import{w as c}from"./with-props-B6V7a6HP.js";import{a as n,o as e}from"./chunk-D4RADZKF-R3cz4WnU.js";import{c as l,B as m,S as i}from"./navigation-2Uh4xG9r.js";import{m as o}from"./proxy-D7FU_v-2.js";/**
+import{w as c}from"./with-props-B6V7a6HP.js";import{a as n,o as e}from"./chunk-D4RADZKF-R3cz4WnU.js";import{c as l,B as m,S as i}from"./navigation-D0f4voZo.js";import{m as o}from"./proxy-D7FU_v-2.js";/**
  * @license lucide-react v0.511.0 - ISC
  *
  * This source code is licensed under the ISC license.
