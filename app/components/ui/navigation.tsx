@@ -14,6 +14,7 @@ const linkedPages = [
       { link: "folio/suiteaurora", titlePage: "Suite Aurora" },
       { link: "folio/gidoc", titlePage: "Gidoc" },
       { link: "folio/sfm", titlePage: "SFM" },
+      { link: "folio/meta-40", titlePage: "Meta 4.0" },
     ],
   },
   { icon: File, link: "cvlbgraph", titlePage: "CV" },

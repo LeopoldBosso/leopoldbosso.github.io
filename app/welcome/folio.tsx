@@ -9,6 +9,7 @@ const projectRoutes = [
     { path: "suiteaurora", label: "Suite Aurora" },
     { path: "gidoc", label: "Gidoc" },
     { path: "sfm", label: "SFM" },
+    { path: "meta-40", label: "Meta 4.0" },
 ];
 
 export default function Folio() {
@@ -37,8 +38,26 @@ export default function Folio() {
 
     return (
         <div className="flex">
-            <div className="max-w-4xl mx-auto p-6 pt-[9rem] w-full">
+            <div className="max-w-4xl mx-auto p-6 pt-[9rem] w-full relative">
                 <BannerAndNavigation />
+
+                {/* Dots navigation en haut de la page - Desktop only */}
+                {currentIndex !== -1 && (
+                    <div className="hidden md:flex justify-center gap-4 mb-8 left-0 right-0">
+                        {projectRoutes.map((route, index) => (
+                            <button
+                                key={route.path}
+                                onClick={() => goTo(index)}
+                                aria-label={route.label}
+                                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                                    index === currentIndex
+                                        ? "bg-blue-600 scale-125"
+                                        : "bg-gray-300 hover:bg-blue-400"
+                                }`}
+                            />
+                        ))}
+                    </div>
+                )}
 
                 {/* Flèches en mobile */}
                 {currentIndex !== -1 && (

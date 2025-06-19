@@ -37,7 +37,7 @@ export default function CVLeopoldBossoStyled() {
               <CardContent className="p-6 space-y-2">
                 <h2 className="text-2xl font-semibold text-blue-800">Profil professionnel</h2>
                 <p className="text-gray-700">
-                  Professionnel passionné par la gestion de projet, le développement logiciel et les ressources humaines, avec plus de 4 ans d’expérience. Compétent en coordination, analyse et mentorat, prêt à relever de nouveaux défis dans un poste de direction technique ou organisationnelle.
+                  Professionnel passionné par la gestion de projet, le développement personnel et les ressources humaines, avec plus de 4 ans d'expérience. Compétent en coordination, analyse et mentorat, prêt à relever de nouveaux défis dans un nouveau poste technique ou organisationnelle. Je maitrise facilement de nouveaux concepts et intègre facilement les différents aspects et approches nécessaires à un nouveau poste. Je suis disponible pour relever tous les défis qui me seront proposés.
                 </p>
               </CardContent>
             </Card>
@@ -48,7 +48,7 @@ export default function CVLeopoldBossoStyled() {
               <CardContent className="p-6">
                 <h2 className="text-2xl font-semibold text-blue-800 mb-4">Compétences clés</h2>
                 <div className="flex flex-wrap gap-3">
-                  {['Scrum', 'Kanban', 'DevOps', 'Gestion d’équipes', 'Gestion de projet', 'C#, C, C++, SQL, HTML/CSS', 'FastReport', 'Mentorat', 'Suite Office', 'TI', 'Français', 'Anglais'].map(skill => (
+                  {['Gestion d\'équipes', 'Gestion de projet','Mentorat', 'Suite Office','Scrum', 'Kanban', 'DevOps',  'C#, C, C++, SQL, HTML/CSS', 'FastReport',  'TI', 'Français', 'Anglais'].map(skill => (
                     <Badge key={skill} variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">{skill}</Badge>
                   ))}
                 </div>
@@ -86,10 +86,23 @@ export default function CVLeopoldBossoStyled() {
 
                 <div>
                   <h3 className="text-lg font-bold">Expériences antérieures – France | 2001 – 2012</h3>
+                  <p className="font-bold text-gray-700">Marine Nationale</p>
                   <ul className="list-disc list-inside text-gray-700">
-                    <li>Chef de section - électricien – Marine Nationale</li>
-                    <li>Adjoint électricien – Norauto (centre auto)</li>
-                    <li>Manager – McDonald’s</li>
+                    <li>Électricien naval </li>
+                    <li>Électricien sous marinier sur sous marin nucléaire</li>
+                    <li>Chef de section (gestion de personnel et mentorat)</li>
+                    <li>Planification et préparation des stocks</li>
+                  </ul>
+                  <p className="font-bold text-gray-700">Adjoint électricien Norauto (centre auto)</p>
+                  <ul className="list-disc list-inside text-gray-700">
+                    <li>Mécanique de base</li>
+                    <li>Électricien auto</li>
+                  </ul>
+                  <p className="font-bold text-gray-700">Manager - McDonald's </p>
+                  <ul className="list-disc list-inside text-gray-700">
+                    <li>Gestion de restaurant</li>
+                    <li>Gestion des stocks</li>
+                    <li>Gestion de personnel et planification</li>
                   </ul>
                 </div>
               </CardContent>
@@ -100,9 +113,10 @@ export default function CVLeopoldBossoStyled() {
               <CardContent className="p-6">
                 <h2 className="text-2xl font-semibold text-blue-800 mb-2">Formation académique</h2>
                 <ul className="list-disc list-inside text-gray-700">
-                  <li>Certificat PSM1 – Scrum.org | 2024</li>
-                  <li>Maîtrise en Informatique – UBO & UQAC | 2018</li>
-                  <li>Baccalauréat – Lycée Faa’a & UBO | 2016</li>
+                  <li>Certificat PSM1 - Scrum.org | 2024</li>
+                  <li>Maîtrise en Informatique - UBO & UQAC | 2018</li>
+                  <li>Licence (Baccalauréat) - Lycée Faa'a & UBO | 2016</li>
+                  <li>Baccalauréat électrotechnique (France) - Lycée Gardanne | 2000</li>
                 </ul>
               </CardContent>
             </Card>
