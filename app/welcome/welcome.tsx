@@ -39,10 +39,13 @@ export function Welcome() {
         className="text-center max-w-xl"
       >
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          Bienvenue sur ma page de présentation !
+          Bienvenue sur ma page!
         </h1>
         <p className="text-slate-600 text-lg mb-6">
-          Je suis Léopold Bosso, gestionnaire et développeur passionné. Retrouvez ici mon CV, mes projets et mes coordonnées.
+          Je suis Léopold Bosso, gestionnaire, développeur, électricien, mécanicien, un touche à tout en somme. Professionnel passionné par la gestion de projet, le développement personnel et les ressources humaines, avec plus de 4 ans d'expérience. Compétent en coordination, analyse et mentorat, prêt à relever de nouveaux défis dans un nouveau poste technique ou organisationnelle. Je maitrise facilement de nouveaux concepts et intègre facilement les différents aspects et approches nécessaires à un nouveau poste. Je suis disponible pour relever tous les défis qui me seront proposés.
+        </p>
+        <p className="text-slate-600 text-lg mb-6"> 
+          Retrouvez ici mon CV, mes projets et mes coordonnées.     
         </p>
         <p className="text-slate-600 text-lg mb-6">
           Ce site est construit avec <strong>React</strong>, stylisé avec <strong>Tailwind CSS</strong> et utilise <strong>Lucide</strong> pour les icônes.
