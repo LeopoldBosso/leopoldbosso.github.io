@@ -43,19 +43,36 @@ export default function Folio() {
 
                 {/* Dots navigation en haut de la page - Desktop only */}
                 {currentIndex !== -1 && (
-                    <div className="hidden md:flex justify-center gap-4 mb-8 left-0 right-0">
-                        {projectRoutes.map((route, index) => (
-                            <button
-                                key={route.path}
-                                onClick={() => goTo(index)}
-                                aria-label={route.label}
-                                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                                    index === currentIndex
-                                        ? "bg-blue-600 scale-125"
-                                        : "bg-gray-300 hover:bg-blue-400"
-                                }`}
-                            />
-                        ))}
+                    <div className="hidden md:flex justify-center items-center gap-4 mb-8">
+                        <button
+                            onClick={goPrev}
+                            aria-label="Projet précédent"
+                            className="p-2 text-gray-500 hover:text-blue-600 transition"
+                        >
+                            <ChevronLeft size={24} />
+                        </button>
+
+                        <div className="flex gap-3">
+                            {projectRoutes.map((route, index) => (
+                                <button
+                                    key={route.path}
+                                    onClick={() => goTo(index)}
+                                    aria-label={route.label}
+                                    className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex
+                                            ? "bg-blue-600 scale-125"
+                                            : "bg-gray-300 hover:bg-blue-400"
+                                        }`}
+                                />
+                            ))}
+                        </div>
+
+                        <button
+                            onClick={goNext}
+                            aria-label="Projet suivant"
+                            className="p-2 text-gray-500 hover:text-blue-600 transition"
+                        >
+                            <ChevronRight size={24} />
+                        </button>
                     </div>
                 )}
 

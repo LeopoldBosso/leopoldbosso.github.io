@@ -5,27 +5,35 @@ import BannerAndNavigation from "~/components/ui/navigation";
 
 const schools = [
     {
-        name: "Université de Polynésie Française - Tahiti",
-        name2: "Université de Bretagne Occidentale (UBO) - France",
-        degree: "Licence en informatique – 2016",
-        description: "Licence en informatique général, équivalent au Baccalauréat.",
-        image: "/logoUPF.png",
-        image2: "/logoUBO.png",
-    },
-    {
-        name: "Université de Bretagne Occidentale (UBO) - France",
-        name2: "Université du Québec à Chicoutimi (UQAC) - Québec",
-        degree: "Master en Informatique – 2018",
-        description: "Master en Informatique expérimental, parcours à l'UQAC orienté sur l'intelligence artificielle",
-        image: "/logoUBO.png",
-        image2: "/logoUQAC.png",
-    },
-    {
         name: "Scrum.org",
         degree: "Certificat PSM 1 – 2024",
         description: "Certificat de scrum master professionnel.",
         image: "/psm.svg",
     },
+    {
+        name: "Université de Bretagne Occidentale (UBO) - France",
+        name2: "Université du Québec à Chicoutimi (UQAC) - Québec",
+        degree: "Master en Informatique - 2018",
+        description: "Master en Informatique expérimental, parcours à l'UQAC orienté sur l'intelligence artificielle",
+        image: "/logoUBO.png",
+        image2: "/logoUQAC.png",
+    },
+    {
+        name: "Université de Polynésie Française - Tahiti",
+        name2: "Université de Bretagne Occidentale (UBO) - France",
+        degree: "Licence en informatique - 2016",
+        description: "Licence en informatique général, équivalent au Baccalauréat.",
+        image: "/logoUPF.png",
+        image2: "/logoUBO.png",
+    },
+    {
+        name: "Lycée Marie-Madelaine Fourcade - France",
+        degree: "Bacalaureat électrotechnique - 2000",
+        description: "Bacalaureat électrotechnique général, équivalent au DEC.",
+        image: "/mmf.png",
+    },
+    
+    
 ];
 
 
