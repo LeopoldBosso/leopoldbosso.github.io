@@ -5,6 +5,20 @@ import { Book, School, File } from "lucide-react";
 
 const experiences = [
     {
+    name: "Chantier Davie – Lévis, QC",
+    role: "Contremaître – Programme des frégates",
+    date: "2025 – aujourd’hui",
+    image: "https://www.davie.ca/img/davie_logo_dark_fr.svg",
+    description: "Supervision des équipes de production dans le cadre du Programme des frégates, coordination des opérations et suivi de l’avancement des travaux.",
+    responsabilities: [
+        "Supervision des équipes de production",
+        "Planification et organisation des opérations quotidiennes",
+        "Communication des priorités et suivi de l’exécution",
+        "Résolution des obstacles opérationnels",
+        "Coordination avec les gestionnaires de navire",
+        "Accompagnement des employés et gestion des attentes"],
+    },
+    {
         name: "PG Solutions – Québec, QC",
         role: "Coordonnateur, Scrum Master R&D",
         date: "2022 – aujourd’hui'hui",

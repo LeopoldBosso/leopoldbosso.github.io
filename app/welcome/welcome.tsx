@@ -41,8 +41,17 @@ export function Welcome() {
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
           Bienvenue sur ma page!
         </h1>
-        <p className="text-slate-600 text-lg mb-6">
-          Je suis Léopold Bosso, gestionnaire, développeur, électricien, mécanicien, un touche à tout en somme. Professionnel passionné par la gestion de projet, le développement personnel et les ressources humaines, avec plus de 4 ans d'expérience. Compétent en coordination, analyse et mentorat, prêt à relever de nouveaux défis dans un nouveau poste technique ou organisationnelle. Je maitrise facilement de nouveaux concepts et intègre facilement les différents aspects et approches nécessaires à un nouveau poste. Je suis disponible pour relever tous les défis qui me seront proposés.
+        <p className="text-slate-600 text-lg mb-6 leading-relaxed">
+          Je suis Léopold Bosso. J’ai toujours évolué dans des environnements où l’organisation, la structure et la capacité à faire avancer les choses sont essentielles. 
+          Au fil de mon parcours, j’ai appris à comprendre rapidement les enjeux, à rassembler les intervenants autour d’un objectif commun et à transformer des idées en actions concrètes.
+          <br /><br />
+          J’ai développé une approche orientée vers la coordination, l’analyse et l’opérationnel. J’aime clarifier, organiser et fluidifier. J’aime créer des ponts entre les personnes, les processus et les objectifs. 
+          Voir un projet prendre forme, une équipe gagner en efficacité ou une organisation avancer avec plus de cohérence est ce qui me motive profondément.
+          <br /><br />
+          Ma polyvalence me permet de saisir rapidement les dynamiques et d’intervenir là où il faut, quand il faut. Je m’adapte vite, j’apprends vite, et je prends naturellement ma place dans les rôles où il faut structurer, coordonner, décider et soutenir la performance.
+          <br /><br />
+          Aujourd’hui, je m’investis dans des fonctions où l’organisation et les opérations sont centrales. Des rôles qui demandent vision, rigueur, communication et constance. 
+          Je suis prêt à relever de nouveaux défis et à mettre pleinement à profit ma capacité d’analyse, ma polyvalence et mon sens de la coordination pour soutenir la performance et la réussite collective.
         </p>
         <p className="text-slate-600 text-lg mb-6"> 
           Retrouvez ici mon CV, mes projets et mes coordonnées.     

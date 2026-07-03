@@ -37,7 +37,13 @@ export default function CVLeopoldBossoStyled() {
               <CardContent className="p-6 space-y-2">
                 <h2 className="text-2xl font-semibold text-blue-800">Profil professionnel</h2>
                 <p className="text-gray-700">
-                  Professionnel passionné par la gestion de projet, le développement personnel et les ressources humaines, avec plus de 4 ans d'expérience. Compétent en coordination, analyse et mentorat, prêt à relever de nouveaux défis dans un nouveau poste technique ou organisationnelle. Je maitrise facilement de nouveaux concepts et intègre facilement les différents aspects et approches nécessaires à un nouveau poste. Je suis disponible pour relever tous les défis qui me seront proposés.
+                  Professionnel polyvalent orienté vers l'organisation, la coordination et l'amélioration de la performance. 
+                  Avec plus de 6 ans d'expérience dans des environnements exigeants, j'ai développé une approche centrée sur la structure, l'analyse et la fluidité des processus.
+                  <br className="print:absolute print:top-0 print:left-0 print:hidden" /><br />
+                  J'aime clarifier les enjeux, rassembler les intervenants et transformer les objectifs en actions concrètes. 
+                  Adaptable et orienté résultats, je mobilise ma vision globale, ma capacité d'analyse et mon sens de la coordination pour soutenir la performance organisationnelle et contribuer à l'atteinte des objectifs stratégiques.
+                  <br className="print:absolute print:top-0 print:left-0 print:hidden"/><br />
+                  Prêt à relever de nouveaux défis, je m'investis pleinement dans les rôles où la rigueur, la communication et la constance sont essentielles.
                 </p>
               </CardContent>
             </Card>
@@ -48,8 +54,13 @@ export default function CVLeopoldBossoStyled() {
               <CardContent className="p-6">
                 <h2 className="text-2xl font-semibold text-blue-800 mb-4">Compétences clés</h2>
                 <div className="flex flex-wrap gap-3">
-                  {['Gestion d\'équipes', 'Gestion de projet','Mentorat', 'Suite Office','Scrum', 'Kanban', 'DevOps',  'C#, C, C++, SQL, HTML/CSS', 'FastReport',  'TI', 'Français', 'Anglais'].map(skill => (
-                    <Badge key={skill} variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">{skill}</Badge>
+                  {['Coordination d\'équipes','Organisation et structuration des processus','Gestion de projet',
+                  'Analyse organisationnelle','Amélioration continue','Communication et collaboration','Leadership transversal',
+                  'Facilitation Agile','Scrum','Kanban','Suite Office','Français','Anglais'
+                  ].map(skill => (
+                    <Badge key={skill} variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">
+                      {skill}
+                    </Badge>
                   ))}
                 </div>
               </CardContent>
@@ -61,48 +72,62 @@ export default function CVLeopoldBossoStyled() {
                 <h2 className="text-2xl font-semibold text-blue-800">Expérience professionnelle</h2>
 
                 <div>
-                  <h3 className="text-lg font-bold">PG Solutions – Québec, QC</h3>
-                  <p className="italic">Coordonnateur, Scrum Master R&D | 2022 – aujourd’hui</p>
+                  <h3 className="text-lg font-bold">Chantier Davie - Lévis, QC</h3>
+                  <p className="italic">Contremaître - Programme des frégates | 2025 - aujourd'hui</p>
                   <ul className="list-disc list-inside text-gray-700">
-                    <li>Gestion de projets : Aurora, GIDOC, SFM</li>
-                    <li>Animation Scrum, coordination agile</li>
-                    <li>Implémentation de modules IA, RH, paie</li>
-                  </ul>
-                  <p className="italic mt-2">Scrum Master & Analyste Développeur R&D | 2020 – 2022</p>
-                  <ul className="list-disc list-inside text-gray-700">
-                    <li>Développement logiciel, mentorat</li>
-                    <li>Intégration FastReport, support équipe</li>
+                    <li>Supervision des équipes de production dans le cadre du Programme des frégates.</li>
+                    <li>Planification et organisation des opérations quotidiennes pour assurer l'avancement des travaux.</li>
+                    <li>Communication des priorités, suivi de l'exécution et résolution des obstacles opérationnels.</li>
+                    <li>Coordination avec les gestionnaires de navire et participation aux réunions de production.</li>
+                    <li>Accompagnement des employés, gestion des attentes et soutien au développement des compétences.</li>
                   </ul>
                 </div>
 
                 <div>
-                  <h3 className="text-lg font-bold">APN Global – Québec, QC</h3>
-                  <p className="italic">Analyste Développeur R&D | 2018 – 2020</p>
+                  <h3 className="text-lg font-bold">PG Solutions - Québec, QC</h3>
+                  <p className="italic">Coordonnateur, Scrum Master R&D | 2022 - 2025</p>
                   <ul className="list-disc list-inside text-gray-700">
-                    <li>Développement de META 4.0</li>
-                    <li>Maintenance, support client, rapports</li>
+                    <li>Coordination d'équipes multidisciplinaires et facilitation Agile (Scrum).</li>
+                    <li>Structuration des processus de livraison et amélioration de la performance opérationnelle.</li>
+                    <li>Pilotage de projets majeurs : Aurora, GIDOC, SFM.</li>
+                    <li>Clarification des besoins, alignement des intervenants et suivi des objectifs.</li>
+                  </ul>
+                  <p className="italic mt-2">Scrum Master & Analyste Développeur R&D | 2020 - 2022</p>
+                  <ul className="list-disc list-inside text-gray-700">
+                    <li>Analyse des besoins et soutien à la prise de décision.</li>
+                    <li>Accompagnement des équipes et mentorat.</li>
+                    <li>Contribution à la cohérence organisationnelle et à la fluidité des processus.</li>
                   </ul>
                 </div>
 
                 <div>
-                  <h3 className="text-lg font-bold">Expériences antérieures – France | 2001 – 2012</h3>
+                  <h3 className="text-lg font-bold">APN Global - Québec, QC</h3>
+                  <p className="italic">Analyste Développeur R&D | 2018 - 2020</p>
+                  <ul className="list-disc list-inside text-gray-700">
+                    <li>Analyse et optimisation des processus de production.</li>
+                    <li>Contribution à l'évolution de l'outil META 4.0.</li>
+                    <li>Support aux équipes et coordination des besoins opérationnels.</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-bold">Expériences antérieures - France | 2001 - 2012</h3>
                   <p className="font-bold text-gray-700">Marine Nationale</p>
                   <ul className="list-disc list-inside text-gray-700">
-                    <li>Électricien naval </li>
-                    <li>Électricien sous marinier sur sous marin nucléaire</li>
-                    <li>Chef de section (gestion de personnel et mentorat)</li>
-                    <li>Planification et préparation des stocks</li>
+                    <li>Gestion de personnel et leadership de section.</li>
+                    <li>Planification opérationnelle et organisation des ressources.</li>
+                    <li>Coordination d'activités critiques dans des environnements exigeants.</li>
                   </ul>
                   <p className="font-bold text-gray-700">Adjoint électricien Norauto (centre auto)</p>
                   <ul className="list-disc list-inside text-gray-700">
-                    <li>Mécanique de base</li>
-                    <li>Électricien auto</li>
+                    <li>Gestion opérationnelle et soutien aux activités du centre.</li>
+                    <li>Organisation des interventions et coordination des besoins clients.</li>
                   </ul>
                   <p className="font-bold text-gray-700">Manager - McDonald's </p>
                   <ul className="list-disc list-inside text-gray-700">
-                    <li>Gestion de restaurant</li>
-                    <li>Gestion des stocks</li>
-                    <li>Gestion de personnel et planification</li>
+                    <li>Gestion de restaurant et supervision des équipes.</li>
+                    <li>Planification des ressources et gestion des stocks.</li>
+                    <li>Optimisation des opérations quotidiennes.</li>
                   </ul>
                 </div>
               </CardContent>
@@ -127,42 +152,49 @@ export default function CVLeopoldBossoStyled() {
                 <h2 className="text-2xl font-semibold text-blue-800">Projets marquants</h2>
                 <div>
                   <h3 className="text-lg font-bold">Suite Aurora</h3>
-                  <p className="italic">Réécriture de logiciels financiers pour plusieurs villes,
-                    intégration RH et paie, coordination d’équipe et facilitation Agile</p>
+                  <p className="italic">Coordination d'équipe, structuration des processus de livraison et
+                     facilitation Agile dans le cadre de la réécriture de logiciels financiers utilisés par plusieurs municipalités.</p>
                 </div>
 
                 <div>
                   <h3 className="text-lg font-bold">GIDOC</h3>
-                  <p className="italic">Générateur de documents automatisés,
-                    utilisé dans les modules de paie de la suite Aurora et les logiciels légataire</p>
+                  <p className="italic"> Contribution à la conception et à l'intégration d'un générateur automatisé de documents, 
+                    utilisé dans les modules de paie et les logiciels légataires.</p>
                 </div>
 
                 <div>
                   <h3 className="text-lg font-bold">SFM</h3>
-                  <p className="italic">Logiciel légataire de gestion financière pour municipalités,
-                    maintien et migration vers Aurora</p>
+                  <p className="italic">Soutien au maintien et à la migration d'un logiciel financier municipal vers la suite Aurora.</p>
                 </div>
 
                 <div>
                   <h3 className="text-lg font-bold">META 4.0 </h3>
-                  <p className="italic">Outil de gestion de production pour l’industrie aérospatiale</p>
+                  <p className="italic">Participation à l'évolution d'un outil de gestion de production pour l'industrie aérospatiale.</p>
                 </div>
               </CardContent>
             </Card>
 
-            {/* Centres d’intérêt */}
+            {/* Centres d'intérêt */}
             <Card className="no-print shadow-md">
               <CardContent className="p-6">
-                <h2 className="text-2xl font-semibold text-blue-800 mb-2">Centres d’intérêt</h2>
-                <ul className="list-disc list-inside text-gray-700">
-                  <li>Technologies et innovation</li>
-                  <li>Littérature, cinéma, jeux vidéo</li>
-                  <li>Vie de famille et interactions sociales</li>
+                <h2 className="text-2xl font-semibold text-blue-800 mb-2">Centres d'intérêt</h2>
+                <ul className="list-disc list-inside text-gray-700 space-y-2">
+                 <li>Organisation, performance et gestion humaine.</li>
+                 <li>Littérature, cinéma et culture.</li>
+                 <li>Vie de famille et interactions sociales.</li>              
                 </ul>
               </CardContent>
             </Card>
           </div>
         </motion.div>
+         {/* Bouton Imprimer (visible seulement à l'écran) */}
+        <div className="print:absolute print:top-0 print:left-0 print:hidden flex justify-end mb-4">
+          <button
+            onClick={() => window.print()}
+            className="px-4 py-2 text-sm font-semibold bg-gray-50 text-blue-800 rounded-md shadow hover:bg-gray-200">
+            Imprimer
+          </button>
+        </div>
       </div>
   );
 }
