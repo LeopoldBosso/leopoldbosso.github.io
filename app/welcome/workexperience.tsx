@@ -8,7 +8,7 @@ const experiences = [
     name: "Chantier Davie – Lévis, QC",
     role: "Contremaître – Programme des frégates",
     date: "2025 – aujourd’hui",
-    image: "https://www.davie.ca/img/davie_logo_dark_fr.svg",
+    image: "/davie.svg",
     description: "Supervision des équipes de production dans le cadre du Programme des frégates, coordination des opérations et suivi de l’avancement des travaux.",
     responsabilities: [
         "Supervision des équipes de production",
@@ -54,7 +54,7 @@ const experiences = [
         name: "Norauto - Martigues, France",
         role: "Mécanicien, électricien auto et responsable adjoint aux 2 roues",
         date: "2008 – 2012",
-        image: "https://norauto-guyane.fr//wp-content/uploads/2018/04/logo_norauto.png",
+        image: "/Norauto.png",
         description: "Mécanicien automobile, installateur électrique et audio, entretien des 2 roues.",
         responsabilities: ["Entretien mécanique courant", "Remplacement de vitre", "audio, alarme et système électrique complexe", "maintenance complète et carrosserie des 2 roues", "Support client"],
     },

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const experience = {
     title: "META 4.0",
     period: "2018 - 2020",
-    entreprise: "PG Solutions / Harris Computer",
+    entreprise: "APN",
     description: `Développé spécifiquement pour le secteur manufacturier aérospatial, ce logiciel optimisait la saisie des données de production en temps réel. Il couvrait l'ensemble du processus de fabrication, depuis le découpage des matières premières jusqu'au contrôle final des pièces. 
     
     Conçu comme une preuve de concept en architecture client-serveur, il a été déployé avec succès entre les équipes de Québec et de Californie. 
