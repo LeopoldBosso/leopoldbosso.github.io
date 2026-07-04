@@ -3,7 +3,7 @@ import { Badge } from "app/components/ui/badge";
 import { Mail, Phone, MapPin, Linkedin, HomeIcon, Briefcase, School, Book } from "lucide-react";
 import { motion } from "framer-motion";
 import BannerAndNavigation from "~/components/ui/navigation";
-
+import {experiences} from "~/data/experiences"
 
 export default function CVLeopoldBossoStyled() {
   return (
@@ -69,67 +69,24 @@ export default function CVLeopoldBossoStyled() {
             {/* Expérience */}
             <Card className="no-print shadow-md">
               <CardContent className="p-6 space-y-4">
-                <h2 className="text-2xl font-semibold text-blue-800">Expérience professionnelle</h2>
+              <h2 className="text-2xl font-semibold text-blue-800">Expérience professionnelle</h2>
 
-                <div>
-                  <h3 className="text-lg font-bold">Chantier Davie - Lévis, QC</h3>
-                  <p className="italic">Contremaître - Programme des frégates | 2025 - aujourd'hui</p>
-                  <ul className="list-disc list-inside text-gray-700">
-                    <li>Supervision des équipes de production dans le cadre du Programme des frégates.</li>
-                    <li>Planification et organisation des opérations quotidiennes pour assurer l'avancement des travaux.</li>
-                    <li>Communication des priorités, suivi de l'exécution et résolution des obstacles opérationnels.</li>
-                    <li>Coordination avec les gestionnaires de navire et participation aux réunions de production.</li>
-                    <li>Accompagnement des employés, gestion des attentes et soutien au développement des compétences.</li>
-                  </ul>
+              {experiences.filter(exp => exp.featured).map((exp, index) => (
+                <div key={index} className="space-y-2">
+                 <h3 className="text-lg font-bold">{exp.name}</h3>
+                  <p className="italic">
+                    {exp.role} | {exp.date}
+                  </p>
+              
+                  {exp.responsabilities?.length > 0 && (
+                    <ul className="list-disc list-inside text-gray-700">
+                      {exp.responsabilities.map((item, i) => (
+                        <li key={i}>{item}</li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
-
-                <div>
-                  <h3 className="text-lg font-bold">PG Solutions - Québec, QC</h3>
-                  <p className="italic">Coordonnateur, Scrum Master R&D | 2022 - 2025</p>
-                  <ul className="list-disc list-inside text-gray-700">
-                    <li>Coordination d'équipes multidisciplinaires et facilitation Agile (Scrum).</li>
-                    <li>Structuration des processus de livraison et amélioration de la performance opérationnelle.</li>
-                    <li>Pilotage de projets majeurs : Aurora, GIDOC, SFM.</li>
-                    <li>Clarification des besoins, alignement des intervenants et suivi des objectifs.</li>
-                  </ul>
-                  <p className="italic mt-2">Scrum Master & Analyste Développeur R&D | 2020 - 2022</p>
-                  <ul className="list-disc list-inside text-gray-700">
-                    <li>Analyse des besoins et soutien à la prise de décision.</li>
-                    <li>Accompagnement des équipes et mentorat.</li>
-                    <li>Contribution à la cohérence organisationnelle et à la fluidité des processus.</li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h3 className="text-lg font-bold">APN Global - Québec, QC</h3>
-                  <p className="italic">Analyste Développeur R&D | 2018 - 2020</p>
-                  <ul className="list-disc list-inside text-gray-700">
-                    <li>Analyse et optimisation des processus de production.</li>
-                    <li>Contribution à l'évolution de l'outil META 4.0.</li>
-                    <li>Support aux équipes et coordination des besoins opérationnels.</li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h3 className="text-lg font-bold">Expériences antérieures - France | 2001 - 2012</h3>
-                  <p className="font-bold text-gray-700">Marine Nationale</p>
-                  <ul className="list-disc list-inside text-gray-700">
-                    <li>Gestion de personnel et leadership de section.</li>
-                    <li>Planification opérationnelle et organisation des ressources.</li>
-                    <li>Coordination d'activités critiques dans des environnements exigeants.</li>
-                  </ul>
-                  <p className="font-bold text-gray-700">Adjoint électricien Norauto (centre auto)</p>
-                  <ul className="list-disc list-inside text-gray-700">
-                    <li>Gestion opérationnelle et soutien aux activités du centre.</li>
-                    <li>Organisation des interventions et coordination des besoins clients.</li>
-                  </ul>
-                  <p className="font-bold text-gray-700">Manager - McDonald's </p>
-                  <ul className="list-disc list-inside text-gray-700">
-                    <li>Gestion de restaurant et supervision des équipes.</li>
-                    <li>Planification des ressources et gestion des stocks.</li>
-                    <li>Optimisation des opérations quotidiennes.</li>
-                  </ul>
-                </div>
+              ))}
               </CardContent>
             </Card>
 

@@ -1,0 +1,122 @@
+import { motion } from "framer-motion";
+
+export const experiences = [
+    {
+        featured: true,
+        name: "Chantier Davie - Lévis, QC",
+        role: "Contremaître - Programme des frégates",
+        date: "2025 - aujourd'hui",
+        image: "/davie.svg",
+        description: "Supervision des équipes de production dans le cadre du Programme des frégates, coordination des opérations et suivi de l'avancement des travaux.",
+        responsabilities: [
+            "Supervision des équipes de production",
+            "Planification et organisation des opérations quotidiennes",
+            "Communication des priorités et suivi de l'exécution",
+            "Résolution des obstacles opérationnels",
+            "Coordination avec les gestionnaires de navire",
+            "Accompagnement des employés et gestion des attentes"
+        ],
+    },
+
+    {
+        featured: true,
+        name: "PG Solutions - Québec, QC",
+        role: "Coordonnateur, Scrum Master R&D",
+        date: "2022 - 2025",
+        image: "https://pgsolutions.com/wp-content/themes/understrap-child/images/logo.svg",
+        description: "Coordination d’équipes multidisciplinaires, structuration des processus de livraison et amélioration de la performance organisationnelle.",
+        responsabilities: [
+            "Coordination d’équipes multidisciplinaires",
+            "Facilitation Agile (Scrum)",
+            "Structuration des processus de livraison",
+            "Pilotage de projets majeurs : Aurora, GIDOC, SFM",
+            "Alignement des intervenants et suivi des objectifs"
+        ],
+    },
+
+    {
+        featured: true,
+        name: "PG Solutions - Québec, QC",
+        role: "Scrum Master & Analyste Développeur R&D",
+        date: "2020 - 2025",
+        image: "https://pgsolutions.com/wp-content/themes/understrap-child/images/logo.svg",
+        description: "Analyse des besoins, accompagnement des équipes et contribution à la fluidité des processus organisationnels.",
+        responsabilities: [
+            "Analyse des besoins",
+            "Soutien à la prise de décision",
+            "Accompagnement des équipes",
+            "Mentorat",
+            "Contribution à la cohérence organisationnelle"
+        ],
+    },
+
+    {
+        featured: true,
+        name: "APN Global - Québec, QC",
+        role: "Analyste Développeur R&D",
+        date: "2018 - 2020",
+        image: "https://apnglobal.ca/wp-content/uploads/APN-logo-bolder.svg",
+        description: "Analyse et optimisation des processus de production, soutien aux équipes et coordination des besoins opérationnels.",
+        responsabilities: [
+            "Analyse et optimisation des processus de production",
+            "Contribution à l’évolution de l’outil META 4.0",
+            "Support aux équipes",
+            "Coordination des besoins opérationnels"
+        ],
+    },
+
+    {
+        featured: false,
+        name: "Retour aux études - Tahiti - Polynésie française",
+        role: "Étudiant",
+        date: "2012 - 2018",
+        image: "https://cdn.tahitiheritage.pf/wp-content/uploads/2015/01/embleme-polynesie-franc%CC%A7aise-1.jpg",
+        description: "Parcours académique menant à l’obtention d’un baccalauréat puis d’une maîtrise en informatique.",
+        responsabilities: [],
+    },
+
+    {
+        featured: true,
+        name: "Norauto - Martigues, France",
+        role: "Adjoint électricien, responsable 2 roues",
+        date: "2008 - 2012",
+        image: "/Norauto.png",
+        description: "Gestion opérationnelle du centre, organisation des interventions et coordination des besoins clients.",
+        responsabilities: [
+            "Gestion opérationnelle du centre",
+            "Organisation des interventions",
+            "Coordination des besoins clients",
+            "Soutien aux activités quotidiennes"
+        ],
+    },
+
+    {
+        featured: false,
+        name: "McDonald's - Vitrolles, France",
+        role: "Manager de restaurant",
+        date: "2008",
+        image: "/mcdonald.png",
+        description: "Supervision des équipes, gestion des stocks et optimisation des opérations quotidiennes.",
+        responsabilities: [
+            "Gestion des stocks et inventaires",
+            "Planification des ressources",
+            "Supervision des équipes",
+            "Optimisation des opérations quotidiennes"
+        ],
+    },
+
+    {
+        featured: false,
+        name: "Marine nationale - Brest, France",
+        role: "Sous-officier Électricien, chef d'équipe",
+        date: "2001 - 2008",
+        image: "/MarineNationale.svg",
+        description: "Gestion de personnel, leadership de section et coordination d’activités critiques dans des environnements exigeants.",
+        responsabilities: [
+            "Gestion de personnel",
+            "Leadership de section",
+            "Planification opérationnelle",
+            "Organisation des ressources"
+        ],
+    },
+];

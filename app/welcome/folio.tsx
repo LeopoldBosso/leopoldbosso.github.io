@@ -59,8 +59,8 @@ export default function Folio() {
                                     onClick={() => goTo(index)}
                                     aria-label={route.label}
                                     className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex
-                                            ? "bg-blue-600 scale-125"
-                                            : "bg-gray-300 hover:bg-blue-400"
+                                        ? "bg-blue-600 scale-125"
+                                        : "bg-gray-300 hover:bg-blue-400"
                                         }`}
                                 />
                             ))}
